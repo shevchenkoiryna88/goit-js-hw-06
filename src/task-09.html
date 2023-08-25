@@ -29,12 +29,33 @@
     </style>
   </head>
   <body>
+    
     <p><a href="index.html">Go back</a></p>
 
     <div class="widget">
-      <p>Background color: <span class="color">-</span></p>
-      <button type="button" class="change-color">Change color</button>
+      <p>Background color: 
+        <span class="color">-</span></p>
+      <button 
+          type="button" 
+          class="change-color"
+        onclick=
+        "
+          document.body.style.backgroundColor = getRandomHexColor(); 
+          document.querySelector('.color').textContent = document.body.style.backgroundColor;
+        ">Change color
+      </button>
     </div>
+
+    <!-- skript -->
+<script>
+  function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, 0)}`;
+  }
+</script>
+<!-- skript -->
+    
 
     <script src="js/task-09.js" type="module"></script>
   </body>
