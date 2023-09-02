@@ -1,3 +1,5 @@
+
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -6,20 +8,17 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const list = document.querySelector("#ingredients")
+console.log(list);
 
-
-
-const mainList = document.querySelector("#ingredients")
-
-
-ingredients.map(ingredient => {
-  const item = document.createElement("li");
-  item.textContent = ingredient;
-  item.classList.add("item");
-  mainList.append(item)
-  return item;
+ingredients.map(element => {
+  const li = document.createElement("li");
+  li.textContent = element;
+  li.classList.add("item")
+  list.append(li)
+  console.log(li);
 }
-)
+  )
 
 
 

@@ -1,21 +1,17 @@
-// 1.Порахує і виведе в консоль кількість категорій в 
-// ul#categories, тобто елементів li.item.
 
-const categories = document.querySelector('#categories');
 
-const allItems = categories.querySelectorAll('.item');
+const ulCategories = document.querySelector("#categories")
+console.log(`Number of categories: ${ulCategories.children.length}`);//Number of categories
+ 
+const category = document.querySelector("h2").textContent //Animals
+console.log(category);
 
-// 1.Порахує і виведе в консоль кількість категорій
-console.log(`Number of categories: ${allItems.length}`);
+const elements = document.querySelectorAll(".item");
+console.log(elements);
 
-// forEach
 
-allItems.forEach(item => {
-// h2
-  const title = item.querySelector('h2').textContent;
-// всі li.item
-  const elements = item.querySelectorAll('li');
-  // 2. Виводимо текст заголовка і кількість елементів
-  console.log(`Category: ${title}`);
+elements.forEach(element => {  
+  console.log(`Category : ${category}`);
   console.log(`Elements: ${elements.length}`);
-});
+} 
+  )
