@@ -1,12 +1,13 @@
-const controller = document.querySelector("#font-size-control")
-const text = document.querySelector("#text")
 
-controller.addEventListener("input", () => {
-    const textSize = controller.value;
+const inputController = document.querySelector("#font-size-control")
+
+const span = document.querySelector("#text");
     
-    console.log(textSize);
+inputController.addEventListener("input", () => {
+    let newTextSize = Number(inputController.value);
 
-    text.style.fontSize = `${fontSize}px`
-    return textSize
-}
-);
+    span.style.fontSize = `${newTextSize}px`;
+    return newTextSize
+
+})
+
