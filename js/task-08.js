@@ -17,7 +17,7 @@ if ( !email || !password ) {
     password: password,
     
   };  
-  // console.log(result);
+  console.log(result);
   form.reset()
 }
   
